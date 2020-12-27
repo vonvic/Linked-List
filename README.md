@@ -14,4 +14,4 @@ To test, use
 ```
 make test
 ```
-*As of right now, there are no test files. Running `make test` will result in an error.
+**As of right now, there are no test files. Running `make test` will result in an error.*
