@@ -1,4 +1,5 @@
-# LinkedList1
+# Linked List
+This project is a C++ implementation of a doubly linked-list data structures. It uses OOP to implement the data structures.
 
 To build, use
 ```
