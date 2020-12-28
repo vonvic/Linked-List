@@ -165,5 +165,4 @@ class Iterator {
         Node<T> *data; /**< The pointer to the current Node holding the data.*/
 };
 
-
 #endif // ITER_H
