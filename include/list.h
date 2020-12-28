@@ -7,12 +7,8 @@
 using namespace std;
 
 /**
- * Declaration and implemention of the doubly linked list
- * data structure. Each item in the list is stored in a 
- * Node object, where the Node objects may point to two other
- * Node objects. If we establish a rule such that each node
- * must never point to itself, a rule such that each and
- * every node must point to at least one other node.
+ * @brief Implemention of the doubly linked list
+ * data structure.
  * 
  * @param T the type of data to be stored into List object.
  * 
@@ -176,7 +172,7 @@ class List {
          * Postcondition: item is popped from the back of the List object.
          * Exception: Throws runtime_error if the list is empty.
          */
-        void popBack() {
+        T popBack() {
             if (length == 0)
                 throw runtime_error("Cannot pop an empty list");
             
@@ -236,11 +232,16 @@ class List {
 /**
  * Output operator<< overload
  * Overloads the "<<" operator for use of any output function
- * call. I.e.
- *           std::cout << <List object>
+ * call.
+ * e.g.
+ *      std::cout << <List object>
  * 
- * @param os
- * 
+ * @param os Reference to the output stream variable
+ *      such as cout or ofstream. This will be located
+ *      to the left of the << operator.
+ * @param L Reference to the List object that is being
+ *      outputted. This will be located to the right of the 
+ *      << operator.
  * 
  * Precondition: List is initialized.
  * Postcondition: Reference to the ostream parameter is passed, with
@@ -250,7 +251,6 @@ class List {
 template <class S>
 ostream& operator << (ostream& os, const List<S>& L) {
     os << "[";
-    
     
     for(Iterator<S> __current = L.begin(); __current != L.end(); ++__current) {
         auto current = *__current;
